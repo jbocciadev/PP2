@@ -17,21 +17,33 @@ div {
 .team-div {
   width: 50%;
   height: 100%;
-  flex-grow: 1;
   display: flex;
+  flex-direction: column;
 }
 .team-name {
   width: 100%;
-  font-size: 2rem;
+  font-size: 5rem;
   background-color: transparent;
   color: red;
-  align-content: center;
-  justify-content: center;
   border-color: transparent;
+  text-align: center;
 }
 .score-points {
-  font-size: 3rem;
-  width: 50%;
+  font-size: 7rem;
+  width: 100%;
+  flex-grow:1;
+  text-align: center;
+  display:flex;
+}
+.score-span {
+    align-self:center;
+    justify-self: center;
+    flex-grow: inherit;
+}
+.buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
 }
 button {
     border-radius: 25%;
