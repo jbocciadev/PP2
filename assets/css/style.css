@@ -1,3 +1,22 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@font-face {
+    font-family:"RideTheFader";
+    src: url(/assets/fonts/RideTheFader.ttf);
+}
+@font-face {
+    font-family:"CursedTimer";
+    src: url(/assets/fonts/CursedTimer.ttf);
+}
+@font-face {
+    font-family:"DigitalReadout";
+    src: url(/assets/fonts/DigitalReadout.ttf);
+}
+@font-face {
+    font-family:"MonoBold";
+    src: url(/assets/fonts/MonoBold.ttf);
+}
+
 body {
   margin: 0%;
   padding: 0%;
@@ -22,14 +41,14 @@ div {
 }
 .team-name {
   width: 100%;
-  font-size: 5rem;
+  font-size: 6rem;
   background-color: transparent;
   color: red;
   border-color: transparent;
   text-align: center;
+  font-family: 'MonoBold', sans-serif;
 }
 .score-points {
-  font-size: 7rem;
   width: 100%;
   flex-grow:1;
   text-align: center;
@@ -39,36 +58,48 @@ div {
     align-self:center;
     justify-self: center;
     flex-grow: inherit;
+    font-family: 'RideTheFader', sans-serif;
+    font-size: 8rem;
 }
 .buttons-div {
     display: flex;
     flex-direction: row;
-    justify-self: flex-end;
+    justify-content: space-around;
+}
+
+/* Reversing order of buttons for visitor team */
+#vteam-area .buttons-div {
+    flex-direction: row-reverse;
 }
 button {
-    border-radius: 25%;
-    font-size: 1rem;
+    border-radius: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+
 }
 .btn-2p {
     padding: 0 2em;
     background-color: #fff;
     color: green;
-    font-weight: bold;
+    width:40%;
     border: 3px solid green;
+    order: 3;
 }
 .btn-1p {
     padding: 0 2em;
     background-color: #fff;
     color: blue;
-    font-weight: bold;
+    width:20%;
     border: 3px solid blue;
+    order:2;
 }
 .btn-3p {
     padding: 0 2em;
     background-color: #fff;
     color: red;
-    font-weight: bold;
+    width:20%;
     border: 3px solid red;
+    order:1;
 }
 
 .btn-2p:hover {
@@ -92,12 +123,14 @@ button {
 
 .stats-area {
     display:flex;
+    flex-direction: row;
 }
 table {
-    display:inline;
-    width: 100%;
+    flex-grow: 1;
 }
-
+.table-head {
+    flex-grow: 1;
+}
 footer {
   position: absolute;
   bottom: 0;
