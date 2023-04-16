@@ -1,16 +1,7 @@
-/* Importing google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* Importing fonts from files (fontspace.com) */
 @font-face {
     font-family:"RideTheFader";
     src: url(/assets/fonts/RideTheFader.ttf);
-}
-@font-face {
-    font-family:"CursedTimer";
-    src: url(/assets/fonts/CursedTimer.ttf);
-}
-@font-face {
-    font-family:"DigitalReadout";
-    src: url(/assets/fonts/DigitalReadout.ttf);
 }
 @font-face {
     font-family:"MonoBold";
