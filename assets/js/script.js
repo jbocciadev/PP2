@@ -12,15 +12,23 @@ let guestTeam = {
 homeTeam.lineup = createLineup();
 guestTeam.lineup = createLineup();
 
-// Wait for document to load and assigns event listeners and actions
+// Wait for document to load and assign event listeners and actions
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName("button");
   for (let button of buttons) {
     button.addEventListener("click", function () {
+      
       let team = this.getAttribute("team");
       let points = parseInt(this.getAttribute("points"));
       let t = team[0];
       assignPoints(t, points);
+      let tTeam = this.getAttribute("tTeam");
+      let player = parseInt(this.getAttribute("player-index"));
+      tTeam === "homeTeam" ? homeTeam.lineup[player][3].push(points) : guestTeam.lineup[player][3].push(points);
+
+
+    //   tTeam.lineup[player].push(points);
+
     });
   }
 });

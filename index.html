@@ -18,15 +18,10 @@
           value="Home"
           maxlength="15"
         />
+
         <div class="score-points home">
           <span class="score-span" id="hteam-points">00</span>
-          <div class="buttons-div">
-            <button data-type="h1" team="home" points="1" button-type="points-button" class="btn-1p">+1</button>
-            <button data-type="h2" team="home" points="2" button-type="points-button" class="btn-2p">+2</button>
-            <button data-type="h3" team="home" points="3" button-type="points-button" class="btn-3p">+3</button>
-          </div>
         </div>
-        
       </div>
 
       <div id="vteam-area" class="team-div">
@@ -37,25 +32,61 @@
           value="Guest"
           maxlength="25"
         />
+
         <div class="score-points visitor">
-            <span class="score-span" id="vteam-points">00</span>
-            <div class="buttons-div">
-              <button data-type="h1" team="visitor" points="1" button-type="points-button" class="btn-1p">+1</button>
-              <button data-type="h2" team="visitor" points="2" button-type="points-button" class="btn-2p">+2</button>
-              <button data-type="h3" team="visitor" points="3" button-type="points-button" class="btn-3p">+3</button>
-            </div>
-          </div>
+          <span class="score-span" id="vteam-points">00</span>
+        </div>
+      </div>
     </div>
     <div class="stats-area">
       <div id="hteam-stats">
         <table>
           <tr>
-            <caption class="table-head" id="htable-header">Home</caption>
+            <caption class="table-head" id="htable-header">
+              Home
+            </caption>
           </tr>
+          <thead>
+            <th>no.</th>
+            <th>player</th>
+            <th>points</th>
+            <th></th>
+          </thead>
           <tr>
             <td class="player-no">01</td>
             <td>Pablo</td>
             <td>25</td>
+            <td>
+              <div class="buttons-div">
+                <button
+                  tTeam="homeTeam"
+                  team="home"
+                  points="1"
+                  player-index="0"
+                  class="btn-1p"
+                >
+                  +1
+                </button>
+                <button
+                  tTeam="homeTeam"
+                  team="home"
+                  points="2"
+                  player-index="0"
+                  class="btn-2p"
+                >
+                  +2
+                </button>
+                <button
+                  tTeam="homeTeam"
+                  team="home"
+                  points="3"
+                  player-index="0"
+                  class="btn-3p"
+                >
+                  +3
+                </button>
+              </div>
+            </td>
           </tr>
           <tr>
             <td class="player-no">02</td>
@@ -117,7 +148,9 @@
       <div id="vteam-stats">
         <table>
           <tr>
-            <caption class="table-head" id="vtable-header">Guest</caption>
+            <caption class="table-head" id="vtable-header">
+              Guest
+            </caption>
           </tr>
           <tr>
             <td>01</td>
