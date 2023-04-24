@@ -1,12 +1,12 @@
 // Create homeTeam and guestTeam as objects
 let homeTeam = {
   name: "Home",
-  currentScore: 'zero',
+  currentScore: 0,
 };
 
 let guestTeam = {
   name: "Guest",
-  currentScore: 'zero',
+  currentScore: 0,
 };
 
 // Add template lineups to home and guest teams
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function createLineup() {
   let lineup = [];
   //initScore is the player's initial score. It is a string token to circumvent the NaN issue of operating with value '0'
-  let initScore = 'zero';
+  let initScore = 0;
   for (let i = 0; i < 12; i++) {
     lineup.push([i, i + 1, "", [], initScore]);
   }
@@ -90,13 +90,17 @@ function assignPoints(team, points) {
 function addPoints(team, player, points) {
 
   //Accessing team's running points tally, testing for zero and adding new points scored.
-  teams[team].currentScore === 'zero' ? teams[team].currentScore = points : teams[team].currentScore += points;
+  // teams[team].currentScore === 'zero' ? teams[team].currentScore = points : 
+  teams[team].currentScore += points;
 
   //Adding points scored to the array of points scored by the player
   teams[team].lineup[player][3].push(points);
 
   //Accessing player's running tally and testing for zero. Adding new points scored.
-  teams[team].lineup[player][4] === 'zero' ? teams[team].lineup[player][4] = points : teams[team].lineup[player][4] += points;
+  // teams[team].lineup[player][4] === 'zero' ? teams[team].lineup[player][4] = points :
+   teams[team].lineup[player][4] += points;
+
+  displayPoints();
 }
 
 /**
@@ -110,6 +114,16 @@ function displayPoints() {
   guestScore.textContent = teams[1].currentScore;
 
   //Display players running totals
+  for (let i=0; i<2; i++) {
+    for (let j=0; j<13; j++) {      
+      playerPoints = teams[0].lineup[j][4];
+      let parent = 'player-' + i + '-' + j;
+      let a = document.querySelector(`#${parent} :nth-child(3)`);
+      a.textContent = playerPoints;
+      console.log(a.textContent);
+  }}
+
+
 }
 
 /**
