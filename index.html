@@ -12,7 +12,7 @@
 <body>
   <div id="score-area">
     <div id="hteam-area" class="team-div">
-      <input type="text" class="team-name" team="home" id="hteam-name" value="Home" maxlength="15" />
+      <input type="text" class="team-name" team="home" ti="0" id="hteam-name" value="Home" maxlength="15" />
 
       <div class="score-points home">
         <span class="score-span" id="hteam-points">0</span>
@@ -20,7 +20,7 @@
     </div>
 
     <div id="vteam-area" class="team-div">
-      <input type="text" class="team-name" id="vteam-name" value="Guest" maxlength="25" />
+      <input type="text" class="team-name" ti="1" id="vteam-name" value="Guest" maxlength="25" />
 
       <div class="score-points visitor">
         <span class="score-span" id="gteam-points">0</span>
@@ -45,17 +45,17 @@
 
           <tr id="player-0-0">
             <td><input t="0" pi="0" name="player-no" type="text" pattern="[0-9]" maxlength="2"></td>
-            <td><input type="text" placeholder="Player name"></td>
-            <td></td>
+            <td><input type="text" team-index="0" player-index="0" name="player-name" maxlength="20" placeholder="Name"></td>
+            <td>0</td>
             <td>
               <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" points="1" player-index="0" class="btn-1p">
+                <button tTeam="homeTeam" team="home" ti="0" points="1" player-index="0" class="btn-1p">
                   +1
                 </button>
-                <button tTeam="homeTeam" team="home" points="2" player-index="0" class="btn-2p">
+                <button tTeam="homeTeam" team="home" ti="0" points="2" player-index="0" class="btn-2p">
                   +2
                 </button>
-                <button tTeam="homeTeam" team="home" points="3" player-index="0" class="btn-3p">
+                <button tTeam="homeTeam" team="home" ti="0" points="3" player-index="0" class="btn-3p">
                   +3
                 </button>
               </div>
@@ -64,8 +64,8 @@
 
           <tr id="player-0-1">
             <td class="player-no">02</td>
-            <td>Name</td>
-            <td></td>
+            <td><input type="text" team-index="0" player-index="1"  name="player-name" maxlength="20" placeholder="Name"></td>
+            <td>0</td>
             <td>
               <div class="buttons-div">
                 <button tTeam="homeTeam" team="home" points="1" player-index="1" class="btn-1p">
@@ -83,8 +83,8 @@
 
           <tr id="player-0-2">
             <td class="player-no">01</td>
-            <td>Pablo</td>
-            <td></td>
+            <td><input type="text" team-index="0" player-index="2"  name="player-name" maxlength="20" placeholder="Name"></td>
+            <td>0</td>
             <td>
               <div class="buttons-div">
                 <button tTeam="homeTeam" team="home" points="1" player-index="2" class="btn-1p">
@@ -102,7 +102,7 @@
 
           <tr>
             <td class="player-no">01</td>
-            <td>Pablo</td>
+            <td><input type="text" name="player-name" maxlength="20" placeholder="Name"></td>
             <td>25</td>
             <td>
               <div class="buttons-div">
@@ -121,7 +121,7 @@
 
           <tr>
             <td class="player-no">01</td>
-            <td>Pablo</td>
+            <td><input type="text" name="player-name" maxlength="20" placeholder="Name"></td>
             <td>25</td>
             <td>
               <div class="buttons-div">

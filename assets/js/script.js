@@ -16,17 +16,15 @@ guestTeam.lineup = createLineup();
 let teams = [homeTeam, guestTeam]; //Adding teams to array so it can be accessed dynamically
 
 // Wait for document to load and assign event listeners and actions
+//Add points based on the button clicked
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName("button");
   for (let button of buttons) {
     button.addEventListener("click", function () {
-      let team = this.getAttribute("team");
-      team === "home" ? t = 0 : t = 1; //T = 0 is home, t = 1 is away
-
+      let teamIndex = this.getAttribute("ti");
       let points = parseInt(this.getAttribute("points"));
       let player = parseInt(this.getAttribute("player-index"));
-
-      addPoints(t, player, points);
+      addPoints(teamIndex, player, points);
     });
   }
 
@@ -38,8 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
       let newName = this.value;
       if (team === "home") {
         document.getElementById("htable-header").textContent = newName;
+        teams[0].name = newName;
       } else {
         document.getElementById("vtable-header").textContent = newName;
+        teams[1].name = newName;
       }
     });
   }
@@ -58,6 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     });
   }
+
+  //On player name change, update name in player's array
+  let playerNames = document.getElementsByName("player-name");
+  for (let pName of playerNames) {
+    pName.addEventListener("change", function(){
+        newName = this.value;
+        let teamIndex = parseInt(this.getAttribute("team-index"));
+        let playerIndex = parseInt(this.getAttribute("player-index"));
+        teams[teamIndex].lineup[playerIndex][2] = newName;
+    }) 
+  }
+
 });
 
 
