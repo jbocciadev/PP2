@@ -20,47 +20,52 @@ document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName("button");
   for (let button of buttons) {
     button.addEventListener("click", function () {
-
       let team = this.getAttribute("team");
+      team === "home" ? t = 0 : t = 1; //T = 0 is home, t = 1 is away
+
       let points = parseInt(this.getAttribute("points"));
-      let t = team[0];
-      assignPoints(t, points);
-      let tTeam = this.getAttribute("tTeam");
       let player = parseInt(this.getAttribute("player-index"));
 
-      tTeam === "homeTeam" ? t = 0 : t = 1; //Team 0 is home, team 1 is away
       addPoints(t, player, points);
-
-      // tTeam === "homeTeam" ? homeTeam.lineup[player][3].push(points) : guestTeam.lineup[player][3].push(points);
-      // teams[0].lineup[player][4] === 'zero' ? teams[0].lineup[player][4] = points : teams[0].lineup[player][4] += points;
-
-
     });
   }
-});
 
-// Update team name on table based on name at top of page
-document.addEventListener("DOMContentLoaded", function () {
+  // Update team name on table based on name at top of page
   let names = document.getElementsByClassName("team-name");
   for (let name of names) {
     name.addEventListener("change", function () {
       let team = this.getAttribute("team");
       let newName = this.value;
       if (team === "home") {
-        let hTableHeader = document.getElementById("htable-header");
-        hTableHeader.textContent = newName;
+        document.getElementById("htable-header").textContent = newName;
       } else {
-        let vTableHeader = document.getElementById("vtable-header");
-        vTableHeader.textContent = newName;
+        document.getElementById("vtable-header").textContent = newName;
       }
+    });
+  }
+
+  //On Player number change, check for validity and update object
+  let playerNumbers = document.getElementsByName("player-no");
+  for (let pn of playerNumbers) {
+    pn.addEventListener("change", function () {
+      let n = this.value;
+      let teamIndex = parseInt(this.getAttribute("t"));
+      let playerIndex = parseInt(this.getAttribute("pi"));
+      if (checkPlayerNo(n) === 1) {
+        this.value = teams[teamIndex].lineup[playerIndex][1]; //accessing player no. from the array
+      } else {
+        teams[teamIndex].lineup[playerIndex][1] = n;
+      };
     });
   }
 });
 
+
+
 // Custom functions
 
 /**
- *Creates a nested array of 12 players with [player index, player *number, player name and [points scored]
+ *Creates a nested array of 12 players with [player index, player *number, player name, [points scored] and running tally
  */
 function createLineup() {
   let lineup = [];
@@ -70,17 +75,6 @@ function createLineup() {
     lineup.push([i, i + 1, "", [], initScore]);
   }
   return lineup;
-}
-
-/**
- * Retrieves current score and adds points accordingly
- */
-function assignPoints(team, points) {
-  let elementId = team + "team-points";
-  let score = document.getElementById(elementId);
-  let scorepoints = parseInt(score.textContent);
-  let newScore = scorepoints + points;
-  score.textContent = newScore;
 }
 
 /**
@@ -98,7 +92,7 @@ function addPoints(team, player, points) {
 
   //Accessing player's running tally and testing for zero. Adding new points scored.
   // teams[team].lineup[player][4] === 'zero' ? teams[team].lineup[player][4] = points :
-   teams[team].lineup[player][4] += points;
+  teams[team].lineup[player][4] += points;
 
   displayPoints();
 }
@@ -114,17 +108,29 @@ function displayPoints() {
   guestScore.textContent = teams[1].currentScore;
 
   //Display players running totals
-  for (let i=0; i<2; i++) {
-    for (let j=0; j<13; j++) {      
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 13; j++) {
       playerPoints = teams[0].lineup[j][4];
       let parent = 'player-' + i + '-' + j;
       let a = document.querySelector(`#${parent} :nth-child(3)`);
       a.textContent = playerPoints;
       console.log(a.textContent);
-  }}
+    }
+  }
 
 
 }
+
+function checkPlayerNo(number) {
+  if (isNaN(number)) {  //check for non-number values
+    alert("Please input a number between 0 and 99");
+    return 1;
+  } else {
+    if (number < 0 || number > 99) { //check for valid numeric value
+      alert("Please input a number between 0 and 99");
+      return 1;
+    };
+  }};
 
 /**
 * Displays team name on name change
