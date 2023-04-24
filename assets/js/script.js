@@ -103,7 +103,13 @@ function addPoints(team, player, points) {
  * Displays teams total points and players running tally
  */
 function displayPoints() {
+  //Display teams running totals
+  let homeScore = document.getElementById("hteam-points");
+  homeScore.textContent = teams[0].currentScore;
+  let guestScore = document.getElementById("gteam-points");
+  guestScore.textContent = teams[1].currentScore;
 
+  //Display players running totals
 }
 
 /**
