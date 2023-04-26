@@ -41,164 +41,29 @@
           <th>points</th>
           <th></th>
         </thead>
-        <tbody>
-
-          <tr id="player-0-0">
-            <td><input t="0" pi="0" name="player-no" type="text" pattern="[0-9]" maxlength="2"></td>
-            <td><input type="text" team-index="0" player-index="0" name="player-name" maxlength="20" placeholder="Name"></td>
-            <td>0</td>
-            <td>
-              <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" ti="0" points="1" player-index="0" class="btn-1p">
-                  +1
-                </button>
-                <button tTeam="homeTeam" team="home" ti="0" points="2" player-index="0" class="btn-2p">
-                  +2
-                </button>
-                <button tTeam="homeTeam" team="home" ti="0" points="3" player-index="0" class="btn-3p">
-                  +3
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr id="player-0-1">
-            <td class="player-no">02</td>
-            <td><input type="text" team-index="0" player-index="1"  name="player-name" maxlength="20" placeholder="Name"></td>
-            <td>0</td>
-            <td>
-              <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" points="1" player-index="1" class="btn-1p">
-                  +1
-                </button>
-                <button tTeam="homeTeam" team="home" points="2" player-index="1" class="btn-2p">
-                  +2
-                </button>
-                <button tTeam="homeTeam" team="home" points="3" player-index="1" class="btn-3p">
-                  +3
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr id="player-0-2">
-            <td class="player-no">01</td>
-            <td><input type="text" team-index="0" player-index="2"  name="player-name" maxlength="20" placeholder="Name"></td>
-            <td>0</td>
-            <td>
-              <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" points="1" player-index="2" class="btn-1p">
-                  +1
-                </button>
-                <button tTeam="homeTeam" team="home" points="2" player-index="2" class="btn-2p">
-                  +2
-                </button>
-                <button tTeam="homeTeam" team="home" points="3" player-index="2" class="btn-3p">
-                  +3
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="player-no">01</td>
-            <td><input type="text" name="player-name" maxlength="20" placeholder="Name"></td>
-            <td>25</td>
-            <td>
-              <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" points="1" player-index="3" class="btn-1p">
-                  +1
-                </button>
-                <button tTeam="homeTeam" team="home" points="2" player-index="3" class="btn-2p">
-                  +2
-                </button>
-                <button tTeam="homeTeam" team="home" points="3" player-index="3" class="btn-3p">
-                  +3
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="player-no">01</td>
-            <td><input type="text" name="player-name" maxlength="20" placeholder="Name"></td>
-            <td>25</td>
-            <td>
-              <div class="buttons-div">
-                <button tTeam="homeTeam" team="home" points="1" player-index="4" class="btn-1p">
-                  +1
-                </button>
-                <button tTeam="homeTeam" team="home" points="2" player-index="4" class="btn-2p">
-                  +2
-                </button>
-                <button tTeam="homeTeam" team="home" points="3" player-index="4" class="btn-3p">
-                  +3
-                </button>
-              </div>
-            </td>
-          </tr>
-
-
+        <tbody team="home">
 
         </tbody>
+        
       </table>
     </div>
     <div id="vteam-stats">
-      <table>
-        <tr>
-          <caption class="table-head" id="vtable-header">
-            Guest
-          </caption>
-        </tr>
-        <tr>
-          <td>01</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>03</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>04</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>05</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>06</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>07</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>08</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>09</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td></td>
-        </tr>
-      </table>
+        <table>
+            <tr>
+              <caption class="table-head" id="htable-header">
+                Home
+              </caption>
+            </tr>
+            <thead>
+              <th>no.</th>
+              <th>player</th>
+              <th>points</th>
+              <th></th>
+            </thead>
+            <tbody team="guest">
+    
+            </tbody>
+          </table>
     </div>
   </div>
 
