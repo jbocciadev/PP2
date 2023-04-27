@@ -168,3 +168,11 @@ footer > hr {
   margin: 0;
   border-color: gold;
 }
+
+.loading-container{
+    height:100%;
+    width:100%;
+    color:#fff;
+    position:fixed;
+    display:flex;
+}
