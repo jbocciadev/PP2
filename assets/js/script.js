@@ -77,10 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //Remove banner when site is all ready to be used
+  //Remove translucid white div after page has loaded
+  let loadingContainer = document.getElementById("loading-container");
+  loadingContainer.remove();
 
-  
 });
+
 
 // Custom functions
 
