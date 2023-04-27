@@ -13,25 +13,11 @@ let guestTeam = {
 homeTeam.lineup = createLineup();
 guestTeam.lineup = createLineup();
 
-let teams = [homeTeam, guestTeam]; //Adding teams to array so it can be accessed dynamically
+let teams = [homeTeam, guestTeam]; //Adding teams to array so they can be accessed dynamically
 
 // Wait for document to load and assign event listeners and actions
 //Add points based on the button clicked
 document.addEventListener("DOMContentLoaded", function () {
-  //Insert table rows
-
-  loadTables();
-
-  let buttons = document.getElementsByTagName("button");
-  for (let button of buttons) {
-    button.addEventListener("click", function () {
-      let teamIndex = this.getAttribute("ti");
-      let points = parseInt(this.getAttribute("points"));
-      let player = parseInt(this.getAttribute("player-index"));
-      addPoints(teamIndex, player, points);
-    });
-  }
-
   // Update team name on table based on name at top of page
   let names = document.getElementsByClassName("team-name");
   for (let name of names) {
@@ -50,6 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  //Insert table rows
+
+  loadTables();
+
+  //Add event listeners to add points as buttons are clicked
+  let buttons = document.getElementsByTagName("button");
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      let teamIndex = this.getAttribute("ti");
+      let points = parseInt(this.getAttribute("points"));
+      let player = parseInt(this.getAttribute("player-index"));
+      addPoints(teamIndex, player, points);
+    });
+  }
+
   //On Player number change, check for validity and update object
   let playerNumbers = document.getElementsByName("player-no");
   for (let pn of playerNumbers) {
@@ -57,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let n = this.value;
       let teamIndex = parseInt(this.getAttribute("t"));
       let playerIndex = parseInt(this.getAttribute("pi"));
-      if (checkPlayerNo(n) === 1) {
-        this.value = teams[teamIndex].lineup[playerIndex][1]; //accessing player no. from the array
+      if (checkPlayerNo(n) === 1) {//If the check fails, it returns 1. If 1, access attay and don't assign a new number, else access player number in object and update
+        this.value = teams[teamIndex].lineup[playerIndex][1]; 
       } else {
         teams[teamIndex].lineup[playerIndex][1] = n;
       }
@@ -123,12 +124,15 @@ function displayPoints() {
 
   //Display players running totals
   for (let i = 0; i < 2; i++) {
-    for (let j = 0; j < 13; j++) {
-      playerPoints = teams[0].lineup[j][4];
+    for (let j = 0; j < 12; j++) {
+      console.log(`${i} ${j}`);
+
+      let playerPoints = teams[i].lineup[j][4];
       let parent = "player-" + i + "-" + j;
       let a = document.querySelector(`#${parent} :nth-child(3)`);
-      a.textContent = playerPoints;
-      console.log(a.textContent);
+      console.log(`${i} ${j}`);
+      console.log(a.innerHTML);
+      a.innerHTML = playerPoints;
     }
   }
 }
@@ -162,20 +166,17 @@ function checkPlayerNo(number) {
  */
 function loadTables() {
   let tbodies = document.getElementsByClassName("team-table");
-  console.log(tbodies);
   for (let tb of tbodies) {
     let team = 0;
-    console.log(tb);
-    let t =tb.getAttribute("id");
-    console.log(`t=${t}`);
+    let t = tb.getAttribute("id");
     tb.getAttribute("id") === "home-team" ? (team = 0) : (team = 1);
-    console.log(team);
     let contents = "";
     //Iterate through 12 players to create the rows for the tables
     for (let i = 0; i < 12; i++) {
-        console.log(`team ${team} player ${i}`);
       let row = `<tr id="player-${team}-${i}">
-        <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${i+1}"></td>
+        <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${
+        i + 1
+      }"></td>
         <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
         <td>0</td>
         <td>
@@ -194,7 +195,6 @@ function loadTables() {
         </tr>
         `;
       contents += row;
-      console.log(contents);
     }
     tb.innerHTML = contents;
   }
