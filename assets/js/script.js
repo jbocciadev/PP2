@@ -126,12 +126,9 @@ function displayPoints() {
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 12; j++) {
       console.log(`${i} ${j}`);
-
       let playerPoints = teams[i].lineup[j][4];
       let parent = "player-" + i + "-" + j;
       let a = document.querySelector(`#${parent} :nth-child(3)`);
-      console.log(`${i} ${j}`);
-      console.log(a.innerHTML);
       a.innerHTML = playerPoints;
     }
   }
