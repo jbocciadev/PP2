@@ -175,7 +175,7 @@ function loadTables() {
     for (let i = 0; i < 12; i++) {
         console.log(`team ${team} player ${i}`);
       let row = `<tr id="player-${team}-${i}">
-        <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${i}"></td>
+        <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${i+1}"></td>
         <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
         <td>0</td>
         <td>
