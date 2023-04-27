@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (checkPlayerNo(n) === 1) {//If the check fails, it returns 1. If 1, access attay and don't assign a new number, else access player number in object and update
         this.value = teams[teamIndex].lineup[playerIndex][1]; 
       } else {
-        teams[teamIndex].lineup[playerIndex][1] = n;
+        teams[teamIndex].lineup[playerIndex][1] = parseInt(n);
       }
     });
   }
