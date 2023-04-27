@@ -38,11 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
     name.addEventListener("change", function () {
       let team = this.getAttribute("team");
       let newName = this.value;
+      console.log(team);
+      console.log(newName);
       if (team === "home") {
         document.getElementById("htable-header").textContent = newName;
         teams[0].name = newName;
       } else {
-        document.getElementById("vtable-header").textContent = newName;
+        document.getElementById("gtable-header").textContent = newName;
         teams[1].name = newName;
       }
     });
@@ -159,13 +161,19 @@ function checkPlayerNo(number) {
  * Loads tables on stats
  */
 function loadTables() {
-  let tbodies = document.getElementsByTagName("tbody");
+  let tbodies = document.getElementsByClassName("team-table");
+  console.log(tbodies);
   for (let tb of tbodies) {
     let team = 0;
-    tb.getAttribute("team") === "home" ? (team = 0) : (team = 1);
+    console.log(tb);
+    let t =tb.getAttribute("id");
+    console.log(`t=${t}`);
+    tb.getAttribute("id") === "home-team" ? (team = 0) : (team = 1);
+    console.log(team);
     let contents = "";
     //Iterate through 12 players to create the rows for the tables
-    for (let i = 0; i <= 12; i++) {
+    for (let i = 0; i < 12; i++) {
+        console.log(`team ${team} player ${i}`);
       let row = `<tr id="player-${team}-${i}">
         <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${i}"></td>
         <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>

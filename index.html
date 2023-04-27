@@ -19,14 +19,16 @@
       </div>
     </div>
 
-    <div id="vteam-area" class="team-div">
-      <input type="text" class="team-name" ti="1" id="vteam-name" value="Guest" maxlength="25" />
+    <div id="gteam-area" class="team-div">
+        <input type="text" class="team-name" team="guest" ti="1" id="gteam-name" value="Guest" maxlength="15" />
 
       <div class="score-points visitor">
         <span class="score-span" id="gteam-points">0</span>
       </div>
     </div>
   </div>
+
+
   <div class="stats-area">
     <div id="hteam-stats">
       <table>
@@ -41,17 +43,15 @@
           <th>points</th>
           <th></th>
         </thead>
-        <tbody team="home">
-
-        </tbody>
+        <tbody class="team-table" id="home-team"></tbody>
         
       </table>
     </div>
     <div id="vteam-stats">
         <table>
             <tr>
-              <caption class="table-head" id="htable-header">
-                Home
+              <caption class="table-head" id="gtable-header">
+                Guest
               </caption>
             </tr>
             <thead>
@@ -60,9 +60,7 @@
               <th>points</th>
               <th></th>
             </thead>
-            <tbody team="guest">
-    
-            </tbody>
+            <tbody class="team-table" id="guest-team"></tbody>
           </table>
     </div>
   </div>
