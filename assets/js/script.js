@@ -16,7 +16,7 @@ guestTeam.lineup = createLineup();
 let teams = [homeTeam, guestTeam]; //Adding teams to array so they can be accessed dynamically
 
 // Wait for document to load and assign event listeners and actions
-//Add points based on the button clicked
+//Update team names based on input at top of page
 document.addEventListener("DOMContentLoaded", function () {
   // Update team name on table based on name at top of page
   let names = document.getElementsByClassName("team-name");
@@ -76,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
       teams[teamIndex].lineup[playerIndex][2] = newName;
     });
   }
+
+  //Remove banner when site is all ready to be used
+
+  
 });
 
 // Custom functions
