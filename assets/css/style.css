@@ -7,9 +7,6 @@
   src: url(/assets/fonts/MonoBold.ttf);
 }
 
-*{
-    border: 1px solid red;
-}
 
 body {
   margin: 0%;
@@ -19,12 +16,14 @@ body {
 
 #score-area {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   background-color: #000;
   color: #fff;
   display: flex;
   align-items: center;
   justify-items: center;
+  position:fixed;
+  top:0;
 }
 .team-div {
   flex-basis: 50%;
@@ -35,7 +34,7 @@ body {
 }
 .team-name {
   width: 100%;
-  font-size: 7vw;
+  font-size: 5vw;
   background-color: transparent;
   color: gold;
   border-color: transparent;
@@ -54,14 +53,55 @@ body {
   align-self: center;
   justify-self: center;
   min-width: 3.5ch;
-  /*     flex-grow: inherit; */
   font-family: "RideTheFader", sans-serif;
-  font-size: 10vw;
+  font-size: 7vw;
   border: 1px solid gold;
   background-color: #222;
   color: red;
   order: 2;
 }
+.stats-area {
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+table {
+  border: 2px solid gold;
+  width: 30vw;
+  font-family: sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+.table-head {
+  width: 30vw;
+  border-bottom: 0;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: gold;
+}
+
+
+td {
+  padding: 0.5rem 0;
+  /*   border: 1px solid gold; */
+  text-align: center;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+/* player number */
+.player-no {
+    max-width: 3ch;
+    text-align: center;
+}
+
+/* player name */
+
 
 #btn-container{
     display:flex;
@@ -72,34 +112,28 @@ body {
 .buttons-div {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
   align-self:center;
   justify-self: center;
-  margin-bottom: 1rem;
-  padding: 0 10%;
   order: 1;
   max-width: 100%;
 }
 
 button {
+    background-color: #fff;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: bold;
   }
 
   .btn-2p {
-    /*     padding: 0 2em; */
-    background-color: #fff;
     color: green;
     flex-basis: 40%;
-    /*     flex-grow: stretch; */
     border: 3px solid green;
     order: 3;
   }
   
   .btn-1p {
     /*     padding: 0 2em; */
-    background-color: #fff;
     color: blue;
     flex-basis: 20%;
     border: 3px solid blue;
@@ -108,7 +142,6 @@ button {
   
   .btn-3p {
     /*     padding: 0 2em; */
-    background-color: #fff;
     color: red;
     flex-basis: 20%;
     border: 3px solid red;
@@ -136,37 +169,7 @@ button {
   border: 3px solid #fff;
 }
 
-.stats-area {
-  display: flex;
-  flex-direction: row;
-  background-color: #000;
-  justify-content: space-around;
-  padding: 2rem 0;
-}
 
-table {
-  border: 2px solid gold;
-  width: 30vw;
-  font-family: sans-serif;
-  background-color: #222;
-  color: #fff;
-}
-
-.table-head {
-  width: 30vw;
-  border-bottom: 0;
-  padding: 0.5rem 0;
-  font-size: 2rem;
-  color: gold;
-}
-
-td {
-  padding: 0.5rem 0;
-  /*   border: 1px solid gold; */
-  text-align: center;
-  font-weight: 600;
-  font-family: sans-serif;
-}
 
 footer {
   position: relative;

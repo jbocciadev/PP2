@@ -177,7 +177,7 @@ function loadTables() {
     //Iterate through 12 players to create the rows for the tables
     for (let i = 0; i < 12; i++) {
       let row = `<tr id="player-${team}-${i}">
-        <td><input t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${
+        <td><input class="player-no" t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${
         i + 1
       }"></td>
         <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
