@@ -180,7 +180,7 @@ function loadTables() {
         <td><input class="player-no" t="${team}" pi="${i}" name="player-no" type="text" pattern="[0-9]" maxlength="2" value="${
         i + 1
       }"></td>
-        <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
+        <td><input class="player-name" type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
         <td>0</td>
         <td id="btn-container">
             <div class="buttons-div">
