@@ -182,7 +182,7 @@ function loadTables() {
       }"></td>
         <td><input type="text" team-index="${team}" player-index="${i}" name="player-name" maxlength="20" placeholder="Name" value="Name"></td>
         <td>0</td>
-        <td>
+        <td id="btn-container">
             <div class="buttons-div">
             <button tTeam="homeTeam" team="home" ti="${team}" points="1" player-index="${i}" class="btn-1p">
                 +1
