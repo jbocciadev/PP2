@@ -1,3 +1,7 @@
+
+
+
+
 // Create homeTeam and guestTeam as objects
 let homeTeam = {
   name: "Home",
@@ -24,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     name.addEventListener("change", function () {
       let team = this.getAttribute("team");
       let newName = this.value;
-      console.log(team);
-      console.log(newName);
       if (team === "home") {
         document.getElementById("htable-header").textContent = newName;
         teams[0].name = newName;
@@ -70,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let playerNames = document.getElementsByName("player-name");
   for (let pName of playerNames) {
     pName.addEventListener("change", function () {
-      newName = this.value;
+      let newName = this.value;
       let teamIndex = parseInt(this.getAttribute("team-index"));
       let playerIndex = parseInt(this.getAttribute("player-index"));
       teams[teamIndex].lineup[playerIndex][2] = newName;
@@ -131,7 +133,6 @@ function displayPoints() {
   //Display players running totals
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 12; j++) {
-      console.log(`${i} ${j}`);
       let playerPoints = teams[i].lineup[j][4];
       let parent = "player-" + i + "-" + j;
       let a = document.querySelector(`#${parent} :nth-child(3)`);
@@ -171,7 +172,6 @@ function loadTables() {
   let tbodies = document.getElementsByClassName("team-table");
   for (let tb of tbodies) {
     let team = 0;
-    let t = tb.getAttribute("id");
     tb.getAttribute("id") === "home-team" ? (team = 0) : (team = 1);
     let contents = "";
     //Iterate through 12 players to create the rows for the tables
