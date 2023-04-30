@@ -6,7 +6,9 @@
   font-family: "MonoBold";
   src: url(/assets/fonts/MonoBold.ttf);
 }
-*{border:1px solid red;}
+
+/* *{border:1px solid red;} */
+
 body {
   width: 100%;
   margin: 0%;
@@ -276,8 +278,24 @@ i{
     td *{
         font-size: 2vw;
     }
+    footer{
+        bottom:0;
+        height:22vh;
+    }
+    #footer-container{
+        flex-direction: row;
+        justify-content:flex-start;
+    }
+    #footer-left{
+        font-size: 5vw;
+        justify-self: flex-start;
+        padding-left: .5ch;
+        padding-top: .5rem;
+    }
+    i{
+        font-size:3vw;
+    }
 
-    
 }
 
 @media screen and (min-width:1200px) {
