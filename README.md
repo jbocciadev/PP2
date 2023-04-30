@@ -2,7 +2,7 @@
 
 Score! is a client-based web application that aims at resolving a real-world problem: supplying a simple-yet-useful scoreboard for basketball games where there is no scoreboard available.
 
-![Responsive Mockup](/assets/images/media/score-amiresponsive.PNG)
+![Responsive Mockup](/assets/media/score-amiresponsive.PNG)
 
 Brick is a fully-responsive website that follows the same structure throughout for ease of navigation and a better user experience. Since the topic at hand is such a visually evoking object, the rectangular shape is maintained and repeated in multiple elements of the site.
 
@@ -12,7 +12,7 @@ Brick is a fully-responsive website that follows the same structure throughout f
 
   - Repeated throughout the site, the tite tab displays an icon with the image of a red brick in white background as a friendly reminder for the user.
 
-![Title tab with favicon](/assets/images/media/title_with_favicon.PNG)
+![Title tab with favicon](/assets/media/title_with_favicon.PNG)
 
 - ### __Navigation Bar__
 
