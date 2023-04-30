@@ -7,7 +7,6 @@
   src: url(/assets/fonts/MonoBold.ttf);
 }
 
-/* *{border:1px solid red;} */
 
 body {
   width: 100%;
@@ -59,6 +58,7 @@ body {
   font-family: "RideTheFader", sans-serif;
   font-size: 15vw;
   border: 3px solid gold;
+  border-radius: 10px;
   background-color: #333;
   color: red;
 }
@@ -191,7 +191,9 @@ footer {
   justify-self: center;
 }
 
-footer *{background-color: #333;}
+footer * {
+  background-color: #333;
+}
 
 footer > hr {
   width: 100%;
@@ -199,8 +201,12 @@ footer > hr {
   border-color: gold;
 }
 
-footer a{
-    color: gold;
+footer a {
+  color: gold;
+}
+
+footer p {
+  font-size: 3.5vw;
 }
 
 #footer-container {
@@ -209,37 +215,35 @@ footer a{
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-items: center;
 }
 
-/* *{border:1px solid red;} */
-
-#footer-left{
-    font-family: "RideTheFader", sans-serif;
-    font-size: 9vw;
-    font-weight:200;
-    color:red;
-    transform: rotate(-15deg);
-    margin: 1rem 0;
-    background-color:transparent;
+#footer-left {
+  font-family: "RideTheFader", sans-serif;
+  font-size: 9vw;
+  font-weight: 200;
+  color: red;
+  transform: rotate(-15deg);
+  padding: 1rem 0;
+  background-color: transparent;
 }
 
-#footer-right{
-    width:100%;
-    text-align:center;
+#footer-right {
+  width: 100%;
+  text-align: center;
 }
 
-#socials-container{
-    display:flex;
-    flex-direction: row;
-    margin: 1rem 0;
-    justify-content: space-evenly;
-    align-items: center;
+#socials-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-i{
-    font-size: 4vw;
+i {
+  font-size: 4vw;
 }
 
 #loading-container {
@@ -256,56 +260,92 @@ i{
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+/* CSS to respont to screen sizes with breakpoints at 700px and 1200px */
 
-@media screen and (min-width:700px) {
-    .team-name{
-        font-size: 7vw;
-    }
-    .score-span{
-        font-size: 9vw;
-    }
-    .stats-area{
-        flex-direction: row;
-    }
-    .table-head{
-        font-size: 4vw;
-    }
-    th{
-        font-size: 2vw;
-    }
-    td{
-        font-size: 2vw;
-    }
-    td *{
-        font-size: 2vw;
-    }
-    footer{
-        bottom:0;
-        height:22vh;
-    }
-    #footer-container{
-        flex-direction: row;
-        justify-content:flex-start;
-    }
-    #footer-left{
-        font-size: 5vw;
-        justify-self: flex-start;
-        padding-left: .5ch;
-        padding-top: .5rem;
-    }
-    i{
-        font-size:3vw;
-    }
-
+@media screen and (min-width: 700px) {
+  .team-name {
+    font-size: 7vw;
+  }
+  .score-span {
+    font-size: 9vw;
+  }
+  .stats-area {
+    flex-direction: row;
+  }
+  .table-head {
+    font-size: 4vw;
+  }
+  th {
+    font-size: 2vw;
+  }
+  td {
+    font-size: 2vw;
+  }
+  td * {
+    font-size: 2vw;
+  }
+  footer {
+    bottom: 0;
+    height: 22vh;
+  }
+  #footer-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #footer-left {
+    font-size: 5vw;
+    justify-self: flex-start;
+    padding-left: 0.5ch;
+    padding-top: 0.5rem;
+  }
+  #footer-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  footer p {
+    font-size: 2vw;
+    margin: 0;
+  }
+  i {
+    font-size: 3vw;
+  }
 }
 
-@media screen and (min-width:1200px) {
-    .team-name{
-        font-size: 7vw;
-    }
-    .score-span{
-        font-size: 9vw;
-    }
-
-    
+@media screen and (min-width: 1200px) {
+  .team-name {
+    font-size: 5vw;
+  }
+  .score-span {
+    font-size: 7vw;
+  }
+  .stats-area {
+    margin-top: 45vh;
+  }
+  .table-head {
+    font-size: 3vw;
+  }
+  th {
+    font-size: 2vw;
+  }
+  td {
+    font-size: 2vw;
+  }
+  td * {
+    font-size: 2vw;
+  }
+  footer {
+    height: 25vh;
+  }
+  #footer-left {
+    font-size: 3vw;
+    padding: 1.5rem 0 0 1.5ch;
+  }
+  i {
+    font-size: 2vw;
+  }
+  footer p {
+    font-size: 1vw;
+  }
 }
