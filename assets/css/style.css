@@ -6,7 +6,7 @@
   font-family: "MonoBold";
   src: url(/assets/fonts/MonoBold.ttf);
 }
-
+*{border:1px solid red;}
 body {
   width: 100%;
   margin: 0%;
@@ -239,9 +239,6 @@ i{
     font-size: 4vw;
 }
 
-
-
-
 #loading-container {
   height: 100%;
   width: 100%;
@@ -254,4 +251,42 @@ i{
   font-size: 5vw;
   font-weight: bold;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+
+@media screen and (min-width:700px) {
+    .team-name{
+        font-size: 7vw;
+    }
+    .score-span{
+        font-size: 9vw;
+    }
+    .stats-area{
+        flex-direction: row;
+    }
+    .table-head{
+        font-size: 4vw;
+    }
+    th{
+        font-size: 2vw;
+    }
+    td{
+        font-size: 2vw;
+    }
+    td *{
+        font-size: 2vw;
+    }
+
+    
+}
+
+@media screen and (min-width:1200px) {
+    .team-name{
+        font-size: 7vw;
+    }
+    .score-span{
+        font-size: 9vw;
+    }
+
+    
 }
