@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
@@ -13,80 +14,60 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
     <title>Score!</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="score-area">
-      <div id="hteam-area" class="team-div">
-        <input
-          type="text"
-          class="team-name"
-          team="home"
-          ti="0"
-          id="hteam-name"
-          value="Home"
-          maxlength="15"
-        />
+        <div id="hteam-area" class="team-div">
+            <input type="text" class="team-name" team="home" ti="0" id="hteam-name" value="Home" maxlength="15">
 
-        <div class="score-points home">
-          <span class="score-span" id="hteam-points">0</span>
+            <div class="score-points home">
+                <span class="score-span" id="hteam-points">0</span>
+            </div>
         </div>
-      </div>
 
-      <div id="gteam-area" class="team-div">
-        <input
-          type="text"
-          class="team-name"
-          team="guest"
-          ti="1"
-          id="gteam-name"
-          value="Guest"
-          maxlength="15"
-        />
+        <div id="gteam-area" class="team-div">
+            <input type="text" class="team-name" team="guest" ti="1" id="gteam-name" value="Guest" maxlength="15">
 
-        <div class="score-points visitor">
-          <span class="score-span" id="gteam-points">0</span>
+            <div class="score-points visitor">
+                <span class="score-span" id="gteam-points">0</span>
+            </div>
         </div>
-      </div>
     </div>
     <div class="stats-area">
-      <table>
-        <tr>
-          <caption class="table-head" id="htable-header">
-            Home
-          </caption>
-        </tr>
-        <thead>
-          <th>No.</th>
-          <th>Player</th>
-          <th>Points</th>
-          <th></th>
-        </thead>
-        <tbody class="team-table" id="home-team"></tbody>
-      </table>
-      <table>
-        <tr>
-          <caption class="table-head" id="gtable-header">
-            Guest
-          </caption>
-        </tr>
-        <thead>
-          <th>no.</th>
-          <th>player</th>
-          <th>points</th>
-          <th></th>
-        </thead>
-        <tbody class="team-table" id="guest-team"></tbody>
-      </table>
+        <table>
+            <caption class="table-head" id="htable-header">
+                Home
+            </caption>
+            <thead>
+                <th>No.</th>
+                <th>Player</th>
+                <th>Points</th>
+                <th></th>
+            </thead>
+            <tbody class="team-table" id="home-team"></tbody>
+        </table>
+        <table>
+            <caption class="table-head" id="gtable-header">
+                Guest
+            </caption>
+            <thead>
+                <th>no.</th>
+                <th>player</th>
+                <th>points</th>
+                <th></th>
+            </thead>
+            <tbody class="team-table" id="guest-team"></tbody>
+        </table>
     </div>
 
     <!-- Footer:  Horizontal line above -->
     <footer>
-      <hr />
-      <div id="footer-container">
-        <div id="footer-left">Score!</div>
-        <div id="footer-right">
-            <div id="socials-container">
+        <hr>
+        <div id="footer-container">
+            <div id="footer-left">Score!</div>
+            <div id="footer-right">
+                <div id="socials-container">
                     <div>
                         <a href="https://facebook.com" target="_blank" rel="noopener"
                             aria-label="Visit our Facebook page (opens in a new tab)">
@@ -117,25 +98,25 @@
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
+                </div>
+                <div id="footer-text">
+                    <p>Created by <a href="https://github.com/jbocciadev" target="_blank" rel="noopener"
+                            aria-label="Visit my GitHub page (opens in a new tab)">jbocciadev</a> for <a
+                            href="https://codeinstitute.net" target="_blank" rel="noopener"
+                            aria-label="Visit Code Institute's site (opens in a new tab)">Code
+                            Institute</a>, 2023.</p>
+                </div>
             </div>
-            <div id="footer-text" ><p>Created by <a href="https://github.com/jbocciadev" target="_blank" rel="noopener"
-                aria-label="Visit my GitHub page (opens in a new tab)">jbocciadev</a> for <a
-                href="https://codeinstitute.net" target="_blank" rel="noopener"
-                aria-label="Visit Code Institute's site (opens in a new tab)">Code
-                Institute</a>, 2023.</p></div>
         </div>
-      </div>
     </footer>
 
     <!-- Translucent div to force user to wait until page is completely loaded -->
     <div id="loading-container">Loading...</div>
 
     <!-- Fontawesome script -->
-    <script
-      src="https://kit.fontawesome.com/7c24784c1c.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/7c24784c1c.js" crossorigin="anonymous"></script>
     <!-- JS script -->
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
