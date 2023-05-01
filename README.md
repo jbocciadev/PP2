@@ -32,7 +32,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
   - The "Stats" area carries out a double function. First, it acts as a dislay where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
   - In order to provide a better user experience, the player's number and name were implemented as input fields, allowing the user to customize the contents with information that is relevant at the moment of using the page.
 
-![Stats Area](/assets/images/media/stats_area.PNG)
+![Stats Area](/assets/media/stats_area.PNG)
 
 - ### __The Footer__ 
 
@@ -54,7 +54,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
   -The manner in which the points are stored in easily accessible variables would allow for the implementation of player/team stats reports to be presented to the user with a simple click.
 
 ## Design Principles
-    Since the aim of this site is to provide a solution to a real-world problem, the page needed to be clearly identifiable. Basing design decisions on a physical scoreboard seemed the most reasonable approach.
+Since the aim of this site is to provide a solution to a real-world problem, the page needed to be clearly identifiable. Basing design decisions on a physical scoreboard seemed the most reasonable approach.
 
 ### Inspiration
   ![Inspiration](/assets/media/inspiration_img.jpeg)
@@ -64,7 +64,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
   ![Score_Wireframe](/assets/media/score_wireframe.PNG)
 
 ### Colour palette
-  ![Colour palette](/assets/media/score_pallette.PNG)
+  ![Colour palette](/assets/media/score_palette.PNG)
 
 ## Requirements
 
@@ -183,7 +183,7 @@ You can break the credits section up into Content and Media, depending on what y
 ### Media
 - The Youtube video on the landing page is from [Insider](https://www.youtube.com/@Insider)'s Youtube site.
 - The images thatpopulate the site are from [Pexels](https://pexels.com) and [Unsplash](https://unsplash.com). They were optimised for the web with [Birme](https://birme.net).
-- The colour pallette was extracted using [Coolors](https://coolors.co).
+- The colour pallete was extracted using [Coolors](https://coolors.co).
 - The favicon was created using [Favicon](https://favicon.io).
 - The icons used for social media links and in the cards were sourced from [Fontawesome](https://fontawesome.com).
 
