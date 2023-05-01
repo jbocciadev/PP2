@@ -2,103 +2,74 @@
 
 Score! is a client-based web application that aims at resolving a real-world problem: supplying a simple-yet-useful scoreboard for basketball games where there is no scoreboard available.
 
-![Responsive Mockup](/assets/media/score-amiresponsive.PNG)
+![Responsive Mockup](/assets/media/score_amiresponsive.PNG)
 
-Brick is a fully-responsive website that follows the same structure throughout for ease of navigation and a better user experience. Since the topic at hand is such a visually evoking object, the rectangular shape is maintained and repeated in multiple elements of the site.
+Score! is a fully-responsive website that is easy to use and follow instinctively. It resembles a sports hall scoreboard and maintains the aesthetics throughout for ease of navigation and a better user experience.
 
 ## Features
 
 - ### __Title Tab__
 
-  - Repeated throughout the site, the tite tab displays an icon with the image of a red brick in white background as a friendly reminder for the user.
+  - The tite tab displays an icon with the image of a  red letter S in a black background, resembling the scoreboard's points display in the site.
 
 ![Title tab with favicon](/assets/media/title_with_favicon.PNG)
 
-- ### __Navigation Bar__
+- ### __Loading Banner__
 
-  - Maintained in the same position in all three pages, the simplistic navbar helps the user navigate effortlessly around the page with ease. 
+  - In order to ensure a better user experience and to avoid issues with users triggering event listeners at an early stage, a "Loading..." banner has been implemented.
 
-![Nav Bar](/assets/images/media/navbar.PNG)
+![Loading Banner](/assets/media/loading_banner.PNG)
 
-- ### __The landing page introduction__
+- ### __The scores Area__
 
-  - As a hero image, a picture of an aged red brick wall was chosen. This image aims at bringing the user's attention to the brick itself, and connect with their lifetime memories of brick walls.
-  - The intrductory text, short and clear, invites the user to reflect on the many times they may have seen and felt red bricks used in many of its forms.
+  - As the first thing the user sees when opening the page, the "scores" area displays both the home and the guest teams' names, which were implemented as imputs so the user can update these to suit their needs, and their respective numeric scores.
+  - The teams names in yellow, and the scores in red were designed to maintain the page's theme.
 
-![Landing Page](/assets/images/media/landing_page_hero.PNG)
+![Scores Area](/assets/media/score_area.PNG)
 
-- ### __Factory Video Section__
+- ### __The Stats Area__
 
-  - The video section informs and instructs the user on the modern fabrication of clay bricks. 
-  - The aim of this section is toanswer some questions the user may have, maybe give way to new questions and, hopefully, awaken the user's interest for the topic at hand. 
+  - The "Stats" area carries out a double function. First, it acts as a dislay where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
+  - In order to provide a better user experience, the player's number and name were implemented as input fields, allowing the user to customize the contents with information that is relevant at the moment of using the page.
 
-![Factory Video](/assets/images/media/factory_video.PNG)
-
-- ### __Infocards Section__
-
-  - Here, the user is presented with three cards that provide additional information in the form of fun-facts.  
-
-![Fun Facts](/assets/images/media/facts.PNG)
+![Stats Area](/assets/images/media/stats_area.PNG)
 
 - ### __The Footer__ 
 
-  - The footer section includes links to the relevant social media sites for Brick. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
+  - The footer section includes the page's logo and links to the relevant social media sites for Score!. The links will open to a new tab to allow easy navigation for the user. 
+  - There is also a footnote with the author's details and links to his gitHub profile and Code Institute's main site.
+  - The footer is valuable to the user as it encourages them to keep connected via social media.
 
-![Footer]( /assets/images/media/footer.PNG)
+![Footer]( /assets/media/footer.PNG)
 
-- ### __Album__
+### __Future development opportunities__
 
-  - Resembling an analogue photo album, the Album section presents images in a retro format similar to that of instant photographs. 
-  - This section will allow the user to see the different uses bricks can have, especially where they are used for decorative purposes. 
-
-![Album](/assets/images/media/album.PNG)
-
-- ### __Contact Page__
-
-  - This page will allow the user to contact the site owner by means of a contact form which includes a free-text field inviting the user to share their thoughts.
-  - Along with the form, the Contact page displays the address and a map to Queen's University, Belfast, twhere the organization behind the site can be found.
-
-![Contact](/assets/images/media/contact.PNG)
-
-### __Features Left to Implement__
-
-- Events calendar
-  - In a future version, an events calendar can be developed, with both virtual and in-person events.
-- Contributions to the Album
-  - With a functioning backend, visitors to the site could potentially upload their own images with captions to the Album.
+- Timer
+  - In a future version, an adjustable timer with a start/stop function would be a good asset.
+- Quarters counter
+  - Along with the timer, a custom quarter counter would also provide relevant information to the user.
+- Fouls counters
+  - Another interesting feature to include would be adding a foults counter for the players. This way, the user can clearly see if the limit has been breached and act accordingly.
+- Game/Player stats report
+  -The manner in which the points are stored in easily accessible variables would allow for the implementation of player/team stats reports to be presented to the user with a simple click.
 
 ## Design Principles
-Having such a familiar object as the sole focus for the site, it becomes apparent that this is to be the main source for inspiration. The brick is a parallelepiped - a prism consisting of six parallelograms. Therefore, all shapes in the site are to respect the rectangle as a basis.
+    Since the aim of this site is to provide a solution to a real-world problem, the page needed to be clearly identifiable. Basing design decisions on a physical scoreboard seemed the most reasonable approach.
+
+### Inspiration
+  ![Inspiration](/assets/media/inspiration_img.jpeg)
 
 ### Site structure
-  #### Landing page
-  ![Home_Wireframe](/assets/images/media/home_wireframe.PNG)
+  #### Single-page site
+  ![Score_Wireframe](/assets/media/score_wireframe.PNG)
 
-  #### Album
-  ![Album_Wireframe](/assets/images/media/album_wireframe.PNG)
+### Colour palette
+  ![Colour palette](/assets/media/score_pallette.PNG)
 
-  #### Contact page
-  ![Contact_Wireframe](/assets/images/media/contact_wireframe.PNG)
+## Requirements
 
-### Hero image
-The hero image chosen depicts an aged brick wall, from where the colour pallette is extracted:
-  #### Hero image
-  ![Hero_Image](/assets/images/media/hero-image.webp)
 
-  #### Colour palette
-  ![Colour palette](/assets/images/media/palette-final.PNG)
-
-### Elements
-As mentioned, the elements on the site try to resemble the shape of the red clay brick:
-  #### Navigation links (when hovered-over)
-  ![Nav_links](/assets/images/media/nav_links.PNG)
-
-  #### Introductory text
-  ![Intro-text](/assets/images/media/intro-text.PNG)
-
-  #### Information cards
-  ![Infocards](/assets/images/media/facts.PNG)
+<!-- Continue here -->
 
 ## Testing 
 Based on the data presented by [Statcounter](https://gs.statcounter.com/browser-market-share), the browsers selected for testing are:

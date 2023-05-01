@@ -1,7 +1,4 @@
 
-
-
-
 // Create homeTeam and guestTeam as objects
 let homeTeam = {
   name: "Home",
