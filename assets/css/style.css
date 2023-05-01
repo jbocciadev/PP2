@@ -1,10 +1,12 @@
 @font-face {
   font-family: "RideTheFader";
   src: url("https://jbocciadev.github.io/PP2_score/assets/fonts/RideTheFader.ttf");
+  font-display:swap;
 }
 @font-face {
   font-family: "MonoBold";
   src: url("https://jbocciadev.github.io/PP2_score/./assets/fonts/MonoBold.ttf");
+  font-display:swap;
 }
 
 
