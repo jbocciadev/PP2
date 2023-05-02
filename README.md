@@ -31,6 +31,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
 
   - The "Stats" area carries out a double function. First, it acts as a dislay where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
   - In order to provide a better user experience, the player's number and name were implemented as input fields, allowing the user to customize the contents with information that is relevant at the moment of using the page.
+  
 
 ![Stats Area](/assets/media/stats_area.PNG)
 
@@ -89,11 +90,7 @@ Since the aim of this site is to provide a solution to a real-world problem, the
 | Buttons are not actionable until the page is loaded completely |
 | Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) |
 | Buttons assign the correct amount of poiints to the correct team and player |
-| 
 
-
-
-<!-- Continue here -->
 
 ## Testing 
 Based on the data presented by [Statcounter](https://gs.statcounter.com/browser-market-share), the browsers selected for testing are:
