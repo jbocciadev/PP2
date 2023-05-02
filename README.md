@@ -31,7 +31,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
 
   - The "Stats" area carries out a double function. First, it acts as a dislay where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
   - In order to provide a better user experience, the player's number and name were implemented as input fields, allowing the user to customize the contents with information that is relevant at the moment of using the page.
-  
+  - As an additional feature, the positioning of the buttons has been done altering the normal sequence (ie, 1, 2, 3) in favour of a more functional (3, 1, 2) arrangement, thus placing the +2 button on the outer part of the table, and the +1 and +3 buttons to its left, according to the frequency they'd be used in a basketball match (+2 is expected to be the most frequently used, followed by +1 and +3 in that order).
 
 ![Stats Area](/assets/media/stats_area.PNG)
 
@@ -71,6 +71,7 @@ Since the aim of this site is to provide a solution to a real-world problem, the
   ![Colour palette](/assets/media/score_palette.PNG)
 
 ## Requirements
+   - User
 
 | As a user I want to be able to |
 | --- |
@@ -81,6 +82,7 @@ Since the aim of this site is to provide a solution to a real-world problem, the
 | Assign points by +1, +2 and +3 points |
 | Use this scoreboard in different devices |
  
+   - Developer
 
 | As a developer I want to ensure that |
 | --- |
@@ -89,11 +91,11 @@ Since the aim of this site is to provide a solution to a real-world problem, the
 | The layout is clear and does not lead to confusion |
 | Buttons are not actionable until the page is loaded completely |
 | Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) |
-| Buttons assign the correct amount of poiints to the correct team and player |
+| Buttons assign the correct amount of points to the correct team and player |
 
 
 ## Testing 
-Based on the data presented by [Statcounter](https://gs.statcounter.com/browser-market-share), the browsers selected for testing are:
+Based on the data presented by [Statcounter](https://gs.statcounter.cm/browser-market-share), the browsers selected for testing are:
   - Chrome.
   - Safari.
   - Edge.
@@ -103,40 +105,60 @@ Based on the data presented by [Statcounter](https://gs.statcounter.com/browser-
 
 ### __Site elements:__
   - #### Favicon
-    - Check that the favicon is displayed correctly in different web browsers:
+    - Check that the favicon is displayed correctly in different web browsers.
+  
+  - #### Loading banner
+    - Check that the loading banner is presented and removed as designed in different devices and browsers.
 
-  - #### Navigation links
-    - Check that hyperlinks behind logo and navigation bar are fully functional.
+  - #### Scores area
+    - Check that fonts and colours are displayed correctly and consistently.
+    - Check that inputs (team names) are functioning correctly and updating the tables headers as per design.
+    - Check that scores are correct and accurate to each team.
 
-  - #### Video
-    - Check that YouTube video is working correctly.
- 
+  - #### Stats area
+    - Check that player numbers are displayed correctly, can be updated and that validation is triggered (only numbers 0-99 are allowed).
+    - Check that players names are displayed correctly and can be updated.
+    - Check that player points tallies are displayed correctly and that their values are accurate.
+    - Check that +3, +1 and +2 buttons are displayed correctly and that they assign the correct amount of points to both the player and team.
+    - Check that player name, number, list of points scored and running tally are stored correctly in their respective arrays and are accessible by their player-index value.
+
   - #### Footer links
     - Check that hyperlinks in the foter work correctly:
       - The url is correct.
       - The link is opened in a new page.
+
+   - #### Requirements:
+     - User
+
+| As a user I want to be able to |
+| --- |
+| Update the teams names - OK |
+| See the current scores - OK |
+| See each player's points tally - OK |
+| Update each player's number - OK |
+| Assign points by +1, +2 and +3 points - OK |
+| Use this scoreboard in different devices - OK |
+ 
+ - Developer:
+
+| As a developer I want to ensure that |
+| --- |
+| All items align correctly - OK |
+| Fonts, font sizes and colours are consistent throughout the page - OK |
+| The layout is clear and does not lead to confusion - OK |
+| Buttons are not actionable until the page is loaded completely - OK |
+| Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) - OK |
+| Buttons assign the correct amount of points to the correct team and player - OK |
+
     
-  - #### Form fields
-    - Check that form fields behave accordingly:
-      - First Name, mandatory.
-      - Last Name, mandatory.
-      - Email, mandatory - Check that the user input is a valid email address.
-      - Comment, optional.
 
 ### __Responsive design__
   - Check that the various elements on the site are displayed correctly and adapt based on the size of the screen they are viewed in:
     - Desktop.
-      - Landing page.
-      - Album.
-      - Contact.
     - Tablet.
-      - Landing page.
-      - Album.
-      - Contact.
     - Mobile.
-      - Landing page.
-      - Album.
-      - Contact.
+
+<!-- Continue here -->
 
 ### __Code validation__
   - HTML validation ![](/assets/images/media/html_test.PNG)
