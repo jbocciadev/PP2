@@ -51,7 +51,10 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
 - Fouls counters
   - Another interesting feature to include would be adding a foults counter for the players. This way, the user can clearly see if the limit has been breached and act accordingly.
 - Game/Player stats report
-  -The manner in which the points are stored in easily accessible variables would allow for the implementation of player/team stats reports to be presented to the user with a simple click.
+  - The manner in which the points are stored in easily accessible variables would allow for the implementation of player/team stats reports to be presented to the user with a simple click.
+- Step-back button
+   - An additional array can be created that stores the buttons pressed and an "undo last" button can be implemented where the last item of that array can be accessed and undo any mistakes without needing to refresh the whole page.
+
 
 ## Design Principles
 Since the aim of this site is to provide a solution to a real-world problem, the page needed to be clearly identifiable. Basing design decisions on a physical scoreboard seemed the most reasonable approach.
@@ -67,6 +70,27 @@ Since the aim of this site is to provide a solution to a real-world problem, the
   ![Colour palette](/assets/media/score_palette.PNG)
 
 ## Requirements
+
+| As a user I want to be able to |
+| --- |
+| Update the teams names |
+| See the current scores |
+| See each player's points tally |
+| Update each player's number |
+| Assign points by +1, +2 and +3 points |
+| Use this scoreboard in different devices |
+ 
+
+| As a developer I want to ensure that |
+| --- |
+| All items align correctly |
+| Fonts, font sizes and colours are consistent throughout the page |
+| The layout is clear and does not lead to confusion |
+| Buttons are not actionable until the page is loaded completely |
+| Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) |
+| Buttons assign the correct amount of poiints to the correct team and player |
+| 
+
 
 
 <!-- Continue here -->
