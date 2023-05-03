@@ -4,6 +4,13 @@ const flow = await startFlow(page);
 // because it is part of a user flow.
 await flow.navigate('https://jbocciadev.github.io/PP2_score/');
 
+// This timespan will try to restore the page from the bfcache.
+// Problems restoring from the bfcache are surfaced in this report.
+await flow.startTimespan();
+await page.goto('https://example2.com');
+await page.goBack();
+await flow.endTimespan();
+
 
 
 // Create homeTeam and guestTeam as objects
