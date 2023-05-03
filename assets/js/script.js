@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName("button");
   for (let button of buttons) {
     button.addEventListener("click", function () {
-      let teamIndex = this.getAttribute("ti");
+      let teamIndex = this.getAttribute("data-ti");
       let points = parseInt(this.getAttribute("points"));
       let player = parseInt(this.getAttribute("player-index"));
       addPoints(teamIndex, player, points);
