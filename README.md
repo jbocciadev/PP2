@@ -179,16 +179,11 @@ No errors were found. All warning messages presented by the validators were revi
 ### __Performance Tests (Lighthouse)__
   - Desktop page 
   
-   ![Desktop page](/assets/media/score_lighthouse_test_desktop.JPG)
+   ![Desktop page](/assets/media/score_lighthouse_test_desktop.PNG)
 
   - Mobile page 
   
-  ![Mobile page](/assets/media/score_lighthouse_test.JPG)
-
-  - Issues:
-      - Performance 83% (desktop):
-    This issue is due to "Page prevented back/forward cache restoration". Additionally, this error does not appear when testing for mobile. It is the developer's view that this issue does not apply to the expected use of the page and it is outside the scope of this assignment.
-
+  ![Mobile page](/assets/media/score_lighthouse_test.PNG)
 
 
 ## Git and Deployment
