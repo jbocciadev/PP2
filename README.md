@@ -158,27 +158,38 @@ Based on the data presented by [Statcounter](https://gs.statcounter.cm/browser-m
     - Tablet.
     - Mobile.
 
-<!-- Continue here -->
 
 ### __Code validation__
-  - HTML validation ![](/assets/images/media/html_test.PNG)
-    Warning message ignored as a design decision, beyond scope.
 
-  - CSS validation ![](/assets/images/media/css_test.PNG)
+No errors were found. All warning messages presented by the validators were reviewed and the code is working as expected.
+
+  #### HTML validation 
+  ![](/assets/media/html_validation.PNG)
+   - No errors found.
+
+  #### CSS validation 
+  ![](/assets/media/css_validation.PNG)
+  - One warning found relating to border and background colours being the same in an input field. This was a design decision and done intentionally.
+
+  #### JS validation 
+  ![](/assets/media/js_validation.PNG)
+  - Five warnings found. Four of these are down to functions being defined inside loops (adding event listeners to multiple similar items). The fifth warning can be ignored as the validator expected something different to what was passed, a ternary expression.
+
 
 ### __Performance Tests (Lighthouse)__
-  - Home page 
+  - Desktop page 
   
-   ![Home page](/assets/images/media/lighthouse-home.PNG)
+   ![Desktop page](/assets/media/score_lighthouse_test_desktop.JPG)
 
-  - Album page 
+    - Performance 83%:
+    This issue is due to "Page prevented back/forward cache restoration". According to the help documentationThis is outside the scope of this exercise.
+
+  - Mobile page 
   
-  ![Album page](/assets/images/media/lighthouse-album.PNG)
+  ![Mobile page](/assets/media/score_lighthouse_test.JPG)
 
-  - Contact page 
-  
-  ![Contact page](/assets/images/media/lighthouse-contact.PNG)
 
+<!-- Continue here -->
 
 
 ## Git and Deployment

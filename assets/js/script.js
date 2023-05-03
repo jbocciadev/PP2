@@ -1,3 +1,10 @@
+const flow = await startFlow(page);
+
+// This navigation will not test the bfcache
+// because it is part of a user flow.
+await flow.navigate('https://jbocciadev.github.io/PP2_score/');
+
+
 
 // Create homeTeam and guestTeam as objects
 let homeTeam = {
