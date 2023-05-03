@@ -189,9 +189,6 @@ No errors were found. All warning messages presented by the validators were revi
       - Performance 83% (desktop):
     This issue is due to "Page prevented back/forward cache restoration". Additionally, this error does not appear when testing for mobile. It is the developer's view that this issue does not apply to the expected use of the page and it is outside the scope of this assignment.
 
-    - Accessibility 89%:
-    As with any scoreboard, Score! is a visual reference. Adding labels to the input elements would only hinder the standard user experience without improving the experience to users of page readers. It is the developer's view that, since the page is a visual aid for users without visual impairment, this would be outside the scope for this site.
-
 
 
 ## Git and Deployment

@@ -9,7 +9,6 @@
   font-display:swap;
 }
 
-
 body {
   width: 100%;
   margin: 0%;
@@ -37,9 +36,16 @@ body {
   flex-direction: column;
 }
 
+/* Hide labels to all except screen readers */
 label {
-    visibility: hidden;
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
+
 .team-name {
   width: 100%;
   background-color: transparent;
