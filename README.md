@@ -181,21 +181,23 @@ No errors were found. All warning messages presented by the validators were revi
   
    ![Desktop page](/assets/media/score_lighthouse_test_desktop.JPG)
 
-    - Performance 83%:
-    This issue is due to "Page prevented back/forward cache restoration". According to the help documentationThis is outside the scope of this exercise.
-
   - Mobile page 
   
   ![Mobile page](/assets/media/score_lighthouse_test.JPG)
 
+  - Issues:
+      - Performance 83% (desktop):
+    This issue is due to "Page prevented back/forward cache restoration". Additionally, this error does not appear when testing for mobile. It is the developer's view that this issue does not apply to the expected use of the page and it is outside the scope of this assignment.
 
-<!-- Continue here -->
+    - Accessibility 89%:
+    As with any scoreboard, Score! is a visual reference. Adding labels to the input elements would only hinder the standard user experience without improving the experience to users of page readers. It is the developer's view that, since the page is a visual aid for users without visual impairment, this would be outside the scope for this site.
+
 
 
 ## Git and Deployment
 
-### Git Hub and Gitpod
-The development process was carried out on the [Gitpod](https://www.gitpod.io/) platform and its repository is hosted in [Jbocciadev brick repository](https://github.com/jbocciadev/brick).
+### Git Hub, Gitpod and Code Anywhere
+The development process was carried out on the [Code Anywhere](https://app.codeanywhere.com) platform, with occasional use of the [Gitpod](https://www.gitpod.io/) platform where the former was unavailable. The repository for Score! is hosted in [Jbocciadev score repository](https://github.com/jbocciadev/pp2_score).
 
 Throughout development, the below commands were utilised to capture and store changes:
 ```
@@ -219,17 +221,17 @@ The site has been deployed in GitHub Pages. The steps taken were:
     > Click on the "Save" button
 4. After a few moments, a new box is displayed with the legend "Your sirte is live at..." and a green check mark can be seen beside the latest commit message.
 
-The live site can be found here - https://jbocciadev.github.io/brick/index.html 
+The live site can be found here - https://jbocciadev.github.io/PP2_score/
 
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
 ### Inspiration
-- I first started seeing building elements differently after checking out Bauhasaurus [@alejandrocsome](https://twitter.com/alejandrocsome) *content in Spanish
+- The first time I thought of building a web solution like Score! when, during an u-11 basketball match, the scoreboard was not working correctly and the audience had to keep track of the score by ourselves.
+
+<!-- Continue here -->
+
+
 
 ### Content 
 - The information that populates the page was extracted from [Vandersanden](https://vandersanden.com) and [Hablakilns](https://hablakilns.com).
