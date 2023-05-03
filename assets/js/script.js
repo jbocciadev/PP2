@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let names = document.getElementsByClassName("team-name");
   for (let name of names) {
     name.addEventListener("change", function () {
-      let team = this.getAttribute("team");
+      let team = this.getAttribute("data-team");
       let newName = this.value;
       if (team === "home") {
         document.getElementById("htable-header").textContent = newName;
@@ -181,13 +181,13 @@ function loadTables() {
         <td>0</td>
         <td id="btn-container">
             <div class="buttons-div">
-            <button tTeam="homeTeam" team="home" ti="${team}" points="1" player-index="${i}" class="btn-1p">
+            <button tTeam="homeTeam" team="home" data-ti="${team}" points="1" player-index="${i}" class="btn-1p">
                 +1
             </button>
-            <button tTeam="homeTeam" team="home" ti="${team}" points="2" player-index="${i}" class="btn-2p">
+            <button tTeam="homeTeam" team="home" data-ti="${team}" points="2" player-index="${i}" class="btn-2p">
                 +2
             </button>
-            <button tTeam="homeTeam" team="home" ti="${team}" points="3" player-index="${i}" class="btn-3p">
+            <button tTeam="homeTeam" team="home" data-ti="${team}" points="3" player-index="${i}" class="btn-3p">
                 +3
             </button>
             </div>
