@@ -36,6 +36,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+label {
+    visibility: hidden;
+}
 .team-name {
   width: 100%;
   background-color: transparent;
