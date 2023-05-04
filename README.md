@@ -29,7 +29,7 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
 
 - ### __The Stats Area__
 
-  - The "Stats" area carries out a double function. First, it acts as a dislay where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
+  - The "Stats" area carries out a double function. First, it acts as a display where each player's running tally of points can be clearly seen. Second, it contains the +1, +2 and +3 points buttons that will increment the player's tally and the team's score by that many points.
   - In order to provide a better user experience, the player's number and name were implemented as input fields, allowing the user to customize the contents with information that is relevant at the moment of using the page.
   - As an additional feature, the positioning of the buttons has been done altering the normal sequence (ie, 1, 2, 3) in favour of a more functional (3, 1, 2) arrangement, thus placing the +2 button on the outer part of the table, and the +1 and +3 buttons to its left, according to the frequency they'd be used in a basketball match (+2 is expected to be the most frequently used, followed by +1 and +3 in that order).
 
@@ -55,6 +55,8 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
   - The manner in which the points are stored in easily accessible variables would allow for the implementation of player/team stats reports to be presented to the user with a simple click.
 - Step-back button
    - An additional array can be created that stores the buttons pressed and an "undo last" button can be implemented where the last item of that array can be accessed and undo any mistakes without needing to refresh the whole page.
+- Light-dark toggle
+   - A light and dark mode toggle button option could be implemented, especially if the user is going to print the page for their own records.
 
 
 ## Design Principles
@@ -92,7 +94,6 @@ Since the aim of this site is to provide a solution to a real-world problem, the
 | Buttons are not actionable until the page is loaded completely |
 | Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) |
 | Buttons assign the correct amount of points to the correct team and player |
-
 
 ## Testing 
 Based on the data presented by [Statcounter](https://gs.statcounter.cm/browser-market-share), the browsers selected for testing are:
@@ -150,14 +151,11 @@ Based on the data presented by [Statcounter](https://gs.statcounter.cm/browser-m
 | Tables are loaded correctly (12 players numbered from 1 to 12 with their respective points and buttons) - OK |
 | Buttons assign the correct amount of points to the correct team and player - OK |
 
-    
-
 ### __Responsive design__
   - Check that the various elements on the site are displayed correctly and adapt based on the size of the screen they are viewed in:
     - Desktop.
     - Tablet.
     - Mobile.
-
 
 ### __Code validation__
 
@@ -173,22 +171,17 @@ No errors were found. All warning messages presented by the validators were revi
 
   #### JS validation 
   ![](/assets/media/js_validation.PNG)
-  - Five warnings found. Four of these are down to functions being defined inside loops (adding event listeners to multiple similar items). The fifth warning can be ignored as the validator expected something different to what was passed, a ternary expression.
+  - Five warnings found. Four of these are down to functions being defined inside loops (adding event listeners to multiple similar items). The fifth warning can be ignored as the validator expected something different to what was passed, a ternary operation.
 
 
-### __Performance Tests (Lighthouse)__
-  - Desktop page 
+### __Performance Test (Lighthouse)__
   
-   ![Desktop page](/assets/media/score_lighthouse_test_desktop.PNG)
-
-  - Mobile page 
-  
-  ![Mobile page](/assets/media/score_lighthouse_test.PNG)
-
+   ![Lighthouse](/assets/media/score_lighthouse_test_desktop.PNG)
 
 ## Git and Deployment
 
-### Git Hub, Gitpod and Code Anywhere
+### Git Hub, Code Anywhere and Gitpod
+
 The development process was carried out on the [Code Anywhere](https://app.codeanywhere.com) platform, with occasional use of the [Gitpod](https://www.gitpod.io/) platform where the former was unavailable. The repository for Score! is hosted in [Jbocciadev score repository](https://github.com/jbocciadev/pp2_score).
 
 Throughout development, the below commands were utilised to capture and store changes:
@@ -215,33 +208,26 @@ The site has been deployed in GitHub Pages. The steps taken were:
 
 The live site can be found here - https://jbocciadev.github.io/PP2_score/
 
-
 ## Credits 
 
 ### Inspiration
 - The first time I thought of building a web solution like Score! when, during an u-11 basketball match, the scoreboard was not working correctly and the audience had to keep track of the score by ourselves.
 
-<!-- Continue here -->
-
-
-
-### Content 
-- The information that populates the page was extracted from [Vandersanden](https://vandersanden.com) and [Hablakilns](https://hablakilns.com).
+- It would be foolish of me not to mention [scorecount.com](https://scorecount.com/) and [rapidtables.com](https://www.rapidtables.com/tools/scoreboard.html). They were an obvious reference for me (*"If I hd known they existed before starting with this project, I would have probably built something else..."* :-D)
 
 ### Media
-- The Youtube video on the landing page is from [Insider](https://www.youtube.com/@Insider)'s Youtube site.
-- The images thatpopulate the site are from [Pexels](https://pexels.com) and [Unsplash](https://unsplash.com). They were optimised for the web with [Birme](https://birme.net).
-- The colour pallete was extracted using [Coolors](https://coolors.co).
+- The colour palette was extracted using [Coolors](https://coolors.co).
 - The favicon was created using [Favicon](https://favicon.io).
-- The icons used for social media links and in the cards were sourced from [Fontawesome](https://fontawesome.com).
+- The icons used for social media links were sourced from [Fontawesome](https://fontawesome.com).
 
 ### Code
 - [freeCodeCamp](https://www.freecodecamp.org/) were a huge help in understanding responsive design, relative dimensions, and were my first camp years ago.
-- [Digitalocean](https://www.digitalocean.com/community/tutorials/css-css-grid-layout-intro) for grid css.
-- [W3Schools](https://www.w3schools.com/) were constantly open on my browser. My go-to HTML and CSS site.
+- [Kevin Powell](https://www.kevinpowell.co/) CSS guru Kevin has changed the way I understand page layouts and keeps blowing my mind with his CSS videos on his [YouTube channel](https://youtube.com/kevinpowell). Hi 3-part "flexbox basics" playlist is a must-see for everyone (*"I wish I had seen this one before PP1"* XD).
+- [W3Schools](https://www.w3schools.com/) were constantly open on my browser. My go-to HTML and CSS site. Of special importance was this [Article](https://www.w3schools.com/w3css/w3css_modal.asp). It is a small piece on the site, but it opened up a world pf possibilities.
 - I cannot talk code without thanking Prof. David Malan and all the crew at HarvardX's [CS50X](https://cs50.harvard.edu/x/2023/)
-- [stack __overflow__](https://stackoverflow.com/) if you code, you know ;-)
+- [stack __overflow__](https://stackoverflow.com/) if you code, you know ;-). This [article](https://stackoverflow.com/questions/1735230/can-i-add-a-custom-attribute-to-an-html-tag) was a life saver in my struggle against the HTML validator. Also [this](https://stackoverflow.com/questions/13551899/how-to-show-a-label-only-to-screen-readers-web-accessiblity) helped in adapting the page to screen readers without impacting on its layout.
 
 ### Other
+- First and foremost, I owe gratitude to my family for dinners without me and days out I missed because I needed to sit and work on this project. Their support has always been unwavering.
 - A masive thank you to my mentor, Spencer and his [5pence](https://5pence.net/) site.
 - Thank you, thank you, thank you to the staff and colleagues at [Code Institute](https://codeinstitute.net). Course content, Tutoring sessions and (especially) Slack channels.

@@ -1,4 +1,3 @@
-
 // Create homeTeam and guestTeam as objects
 let homeTeam = {
   name: "Home",
@@ -36,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //Insert table rows
-
   loadTables();
 
   //Add event listeners to add points as buttons are clicked
@@ -151,17 +149,6 @@ function checkPlayerNo(number) {
     }
   }
 }
-
-/**
- * Displays team name on name change
- */
-
-/**
- * Displays player name on namechange
- */
-
-//Add script to display modal(s)?
-
 /**
  * Loads tables on stats
  */
