@@ -114,6 +114,9 @@ Based on the data presented by [Statcounter](https://gs.statcounter.cm/browser-m
 ### __Site elements:__
   - #### Favicon
     - Check that the favicon is displayed correctly in different web browsers.
+
+  - #### Information banner
+    - Check that the information banner is displayed correctly across different devices and browsers.
   
   - #### Loading banner
     - Check that the loading banner is presented and removed as designed in different devices and browsers.
@@ -184,6 +187,10 @@ No errors were found. All warning messages presented by the validators were revi
 ### __Performance Test (Lighthouse)__
   
    ![Lighthouse](/assets/media/score_lighthouse_test_desktop.PNG)
+
+
+### __Known Issues__
+  - It has been noted that in some devices (iPhone) screens, there seems to be an issue with the horizontal limits of the page.
 
 ## Git and Deployment
 
