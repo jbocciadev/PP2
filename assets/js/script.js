@@ -18,6 +18,21 @@ let teams = [homeTeam, guestTeam]; //Adding teams to array so they can be access
 // Wait for document to load and assign event listeners and actions
 //Update team names based on input at top of page
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Instructions
+    // Get and assign buttons and banner to variables
+    let inst = document.getElementById("info-btn");
+    let okBut = document.getElementById("ok-btn");
+    let banner = document.getElementById("info-banner");
+    
+    // Add event listeners to buttons to open and close banner
+    inst.addEventListener("click", function (){
+      banner.style.display = "flex";
+    });
+    okBut.addEventListener("click", function(){
+      banner.style.display = "none";
+    });
+
   // Update team name on table based on name at top of page
   let names = document.getElementsByClassName("team-name");
   for (let name of names) {
