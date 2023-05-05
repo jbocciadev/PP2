@@ -20,7 +20,14 @@ Score! is a fully-responsive website that is easy to use and follow instinctivel
 
 ![Loading Banner](/assets/media/loading_banner.PNG)
 
-- ### __The scores Area__
+- ### __The Instructions Banner__
+
+  - In order to provide users with some direction, an "information" button and an instructions banner have been implemented, always maintaining the theme of the site.
+
+![Info Button](/assets/media/i-button.PNG)
+![instructions Banner](/assets/media/instructions-banner.PNG)
+
+- ### __The Scores Area__
 
   - As the first thing the user sees when opening the page, the "scores" area displays both the home and the guest teams' names, which were implemented as imputs so the user can update these to suit their needs, and their respective numeric scores.
   - The teams names in yellow, and the scores in red were designed to maintain the page's theme.
